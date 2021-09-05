@@ -3,12 +3,19 @@ export interface newBlog {
     title: string,
     content: string,
     authorid?: string,
-    _created?: Date,
-    isPreview?: boolean
+    _created?: Date
 };
 
 export interface mySQL_Response {
     affectedRows: number,
     insertId: number,
     sqlMessage: string
+}
+export interface BlogCardProps extends newBlog  {
+    isPreview?: boolean
+}
+export interface Authors {
+    id: string,
+    name: string,
+    email: string
 }

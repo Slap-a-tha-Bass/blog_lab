@@ -5,6 +5,7 @@ import Home from './views/Home';
 import Blogs from './views/Blogs';
 import NavBar from './components/NavBar';
 import OneBlog from './views/OneBlog';
+import EditBlog from './views/EditBlog';
 
 
 const App = (props: AppProps) => {
@@ -22,6 +23,9 @@ const App = (props: AppProps) => {
 					</Route>
 					<Route exact path="/blogs/:id">
 						<OneBlog />
+					</Route>
+					<Route exact path="/blogs/:id/edit">
+						<EditBlog />
 					</Route>
 				</Switch>
 			</Router>

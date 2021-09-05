@@ -8,11 +8,11 @@ const Blogs = () => {
         fetch(`/api/blogs`)
         .then(res => res.json())
         .then(data => setBlogs(data))
-    });
+    }, []);
     return (
         <div>
             {blogs.map((blog) => (
-                <BlogCard {...blog} isPreview />
+                <BlogCard {...blog} key={blog.id} isPreview />
             ))}
         </div>
     )

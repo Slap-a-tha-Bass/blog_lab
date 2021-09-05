@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
     try {
-        const blog = await db_blogs.get_one_blog(id);
+        const [blog] = await db_blogs.get_one_blog(id);
         res.json(blog);
     } catch (err) {
         res.status(500).json({ message: "Error, not found!"});
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     const wholeBlog: newBlog = { id, title, content, authorid };
     try {
         const postBlog = await db_blogs.post_blog(wholeBlog);
-        res.status(201).json({ message: "Blog created", id});
+        res.status(201).json({ message: "Blog created", id, authorid });
     } catch (err) {
         res.status(500).json({ message: "Error! Not found!" });
     }
