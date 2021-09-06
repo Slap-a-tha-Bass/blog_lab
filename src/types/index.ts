@@ -19,3 +19,8 @@ export interface Authors {
     name: string,
     email: string
 }
+export interface DonateProps {
+    id: string,
+    fullName: string,
+    amount: Number
+}

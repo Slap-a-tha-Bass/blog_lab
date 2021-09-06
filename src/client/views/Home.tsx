@@ -22,8 +22,6 @@ const Home = () => {
     const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setAuthorId(e.target.value);
     }
-    const handleLukeSelect = () => setAuthorId('0d4df92c-372d-4d4b-80e0-8781581d71ff');
-    const handleAndrewSelect = () => setAuthorId('0d4df92c-372d-4d4b-80e0-8781581d71ee');
 
     const handleSubmitClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();

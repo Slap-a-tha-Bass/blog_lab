@@ -6,6 +6,7 @@ const NavBar = () => {
         <div>
             <Link className = "btn btn-outline-warning m-2" to = '/'>Home</Link>
             <Link className = "btn btn-outline-warning m-2" to = '/blogs'>Blogs</Link>
+            <Link className = "btn btn-outline-warning m-2" to = '/donate'>Donate</Link>
         </div>
     )
 }

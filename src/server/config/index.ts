@@ -8,3 +8,6 @@ export const sqlConfig = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST
 }
+export const stripeConfig = {
+    secret: process.env.STRIPE_KEY
+}
