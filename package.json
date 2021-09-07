@@ -25,6 +25,8 @@
     "css-loader": "^5.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "form-data": "^2.3.3",
+    "mailgun.js": "^3.5.8",
     "mysql": "^2.18.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
