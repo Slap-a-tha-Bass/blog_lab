@@ -24,3 +24,8 @@ export interface DonateProps {
     fullName: string,
     amount: Number
 }
+export interface ContactProps {
+    from: string,
+    subject: string,
+    message: string
+}

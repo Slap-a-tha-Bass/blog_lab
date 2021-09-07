@@ -1,6 +1,6 @@
-import * as express from 'express';
+import express from 'express';
 import apiRouter from './routes';
-import * as path from 'path';
+import path from 'path';
 
 const app = express();
 

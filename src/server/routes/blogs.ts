@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';
 import { newBlog } from '../../types';
 import db_blogs from '../db/queries/blogs';
 import { v4 as uuid_v4 } from 'uuid';

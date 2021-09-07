@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';
 import blogsRouter from './blogs';
 import authorsRouter from './authors';
 import donateRouter from './donate';

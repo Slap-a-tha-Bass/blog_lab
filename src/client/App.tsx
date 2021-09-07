@@ -9,6 +9,7 @@ import EditBlog from './views/EditBlog';
 import Donate from './views/Donate';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+import Contact from './views/Contact';
 
 const stripe = loadStripe('pk_test_51JWlwbFmDISVkVU8c8Pfwiku0g2eXRukfDfdjNyW8336baPHPUwsYg4nm2kuUr4WzzXAgQEVr2k9VDTFN6HtaSHa00PBWeP8Nc');
 
@@ -36,6 +37,9 @@ const App = (props: AppProps) => {
 						<Elements stripe={stripe}>
 							<Donate />
 						</Elements>
+					</Route>
+					<Route exact path="/contact">
+						<Contact />
 					</Route>
 				</Switch>
 			</Router>
