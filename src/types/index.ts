@@ -1,3 +1,5 @@
+import { Request } from "express";
+
 export interface newBlog {
     id: string,
     title: string,
@@ -15,9 +17,18 @@ export interface BlogCardProps extends newBlog  {
     isPreview?: boolean
 }
 export interface Authors {
-    id: string,
-    name: string,
-    email: string
+    id?: string,
+    name?: string,
+    password?: string,
+    email?: string,
+    _created?: Date
+}
+export interface Payload extends Authors {
+    userid?: string,
+    role?: number
+}
+export interface ReqUser extends Request {
+    user?: Authors
 }
 export interface DonateProps {
     id: string,

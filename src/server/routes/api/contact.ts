@@ -1,7 +1,7 @@
 import express from 'express';
 import Mailgun from 'mailgun.js'
 import FormData from 'form-data';
-import { mailgunConfig } from '../config';
+import { mailgunConfig } from '../../config';
 import MailGun from 'mailgun.js';
 
 

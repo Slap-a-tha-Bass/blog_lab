@@ -1,12 +1,15 @@
 import express from 'express';
-import apiRouter from './routes';
+import routes from './routes';
 import path from 'path';
+import passport from 'passport';
+import { configurePassport } from './middlewares/passport-strategies.mw';
 
 const app = express();
 
+configurePassport(app);
 app.use(express.json());
 app.use(express.static('public'));
-app.use('/api', apiRouter);
+app.use('/', routes);
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });

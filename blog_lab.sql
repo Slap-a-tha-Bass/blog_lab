@@ -10,7 +10,7 @@ CREATE TABLE Blogs (
     _created DATETIME DEFAULT NOW()
 );
 
-INSERT INTO Blogs (id, title, content, authorid) VALUES ('04a06f0b-c6d5-49e5-8c32-d3a6f8076580', 'How to Use Chopsticks', 'Travel to a country where there are no forks and figure it out yourself.', '0d4df81c-372d-4d4b-80e0-8781581d71ee');
+INSERT INTO Blogs (id, title, content, authorid) VALUES ('99a06f0b-c6d5-49e5-8c32-d3a6f8076580', 'How to Use Knives', 'Read Kitchen Confidential by Anthony Bourdain, ya dumbdumb!', '0d4df92c-372d-4d4b-80e0-8781581d71ff');
 
 DROP TABLE Authors;
  CREATE TABLE Authors (
@@ -19,8 +19,8 @@ DROP TABLE Authors;
     email VARCHAR(32) NOT NULL,
     _created DATETIME DEFAULT NOW()
 );   
-INSERT INTO Authors (id, name, email) VALUES ('0d4df81c-372d-4d4b-80e0-8781581d71ee', 'Slap-a-tha-Bass', 'slapathabass@slap.com');
-
+INSERT INTO Authors (id, name, email) VALUES ('0d4df92c-372d-4d4b-80e0-8781581d71ff', 'Luke', 'luke@luke.com');
+SELECT * FROM Authors;
 DROP TABLE Tags;
 CREATE TABLE Tags (
 	id CHAR(36) PRIMARY KEY,
@@ -37,6 +37,14 @@ CREATE TABLE BlogTags (
     FOREIGN KEY (blogid) REFERENCES Blogs (id),
     FOREIGN KEY (tagid) REFERENCES Tags (id)
 );
+
+CREATE TABLE Users (
+	id CHAR(36) PRIMARY KEY,
+    name VARCHAR(32) NOT NULL UNIQUE,
+    email VARCHAR(36) NOT NULL,
+    _created DATETIME DEFAULT NOW()
+);
+
 DELIMITER $$
 CREATE PROCEDURE spBlogTags (blog_id CHAR(36))
 BEGIN

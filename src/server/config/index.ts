@@ -1,4 +1,4 @@
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -15,4 +15,9 @@ export const mailgunConfig = {
     secret: process.env.MAILGUN_KEY,
     domain: process.env.MAILGUN_DOMAIN,
     toEmail: process.env.MAILGUN_TO_EMAIL
+}
+
+export const jwtConfig = {
+    secret: process.env.JWT_SECRET,
+    expires: process.env.JWT_EXPIRES
 }

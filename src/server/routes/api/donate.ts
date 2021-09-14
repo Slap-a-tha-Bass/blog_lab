@@ -1,6 +1,6 @@
 import express from 'express';
 import Stripe from 'stripe';
-import { stripeConfig } from '../config';
+import { stripeConfig } from '../../config';
 
 const stripe = new Stripe(stripeConfig.secret, { apiVersion: '2020-08-27' });
 

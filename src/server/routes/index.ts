@@ -1,14 +1,11 @@
 import express from 'express';
-import blogsRouter from './blogs';
-import authorsRouter from './authors';
-import donateRouter from './donate';
-import contactRouter from './contact';
+import apiRouter from './api';
+import authRouter from './auth';
 
 const router = express.Router();
 
-router.use('/blogs', blogsRouter);
-router.use('/authors', authorsRouter);
-router.use('/donate', donateRouter);
-router.use('/contact', contactRouter);
+router.use('/api', apiRouter);
+router.use('/auth', authRouter);
+
 
 export default router;
