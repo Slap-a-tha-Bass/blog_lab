@@ -46,10 +46,10 @@ const Home = () => {
     }, []);
     return (
         <div className="container">
-            <form className="form-group col-md-6 bg-light">
-                <label className="text-warning">Title</label>
+            <form className="form-group col-md-12 bg-light">
+                <label className="text-warning my-1 font-weight-bold">Title</label>
                 <input className="form-control" type="text" onChange={handleTitleInput} />
-                <label className="text-warning">New Post</label>
+                <label className="text-warning my-1 font-weight-bold">New Post</label>
                 <textarea className="form-control" onChange={handleContentInput}></textarea>
                 <select onChange = {handleSelect} className="form-select mt-3" aria-label="Default select sample">
                     <option value="0">Choose Which Author</option>
@@ -59,8 +59,8 @@ const Home = () => {
                         </option>
                     ))}
                 </select>
-                <div className="d-flex justify-content-end">
-                    <button onClick={handleSubmitClick} className="btn btn-warning my-3">Submit</button>
+                <div className="d-flex justify-content-center">
+                    <button onClick={handleSubmitClick} className="btn btn-primary my-3">Submit</button>
                 </div>
             </form>
         </div>
